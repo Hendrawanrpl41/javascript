@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sigin</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+<body>
+	
+			
+			<div class="input">
+				Username: <input type="text" name="username" id="user">
+			</div>
+			<br>
+			<div class="input">
+				Password: <input type="password" name="password" id="pass">
+			</div>
+			<br>
+			<button onclick="login()" class="btn btn-primary">Login</button>
+			<button class="btn btn-danger">Reset</button>
+			
+		<!-- </div> -->
+	
+</body>
+<script type="text/javascript">
+	function login(){
+		if(true){
+			var user = document.getElementById("user").value;
+			var pass = document.getElementById("pass").value;
+		}
+		
+		localStorage.setItem("username", user);
+		window.location.href = 'lat3.html';
+	}
+</script>
+</html>
