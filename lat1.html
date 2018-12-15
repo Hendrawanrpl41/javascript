@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lat1</title>
+
+</head>
+<body>
+	jumlah  : <input type="number" id="jumlah">
+	<button onclick="tambahdata()">tambah</button>
+	<button id="reset" onclick="reset()">reset</button>
+	<div id="wadah">
+		
+	</div>
+	<script type="text/javascript">
+		function tambahdata(){
+			var jumlah = document.getElementById('jumlah').value;
+			for(i=1;i<=jumlah;i++){
+				if(!(i%2)){
+					document.getElementById('wadah').innerHTML += ("nama"+i+"  : <input name = "+i+" ><br>");
+				}
+				
+
+			}
+		}
+		function reset(){
+			document.getElementById('wadah').innerHTML = null;
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, td {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+Baris <input type="number" id ="baris">
+<!-- Kolom <input type="number" id="kolom"> -->
+<button onclick="tambahTabel()">Buat Tabel</button><br>
+<!-- Hapus <input type="number" id="jumlah"> -->
+<!-- <button onclick="hapusbaris()">hapus</button> -->
+<!-- data <input type="number" id="data"> -->
+<button id="reset" onclick="reset()">reset</button>
+<table border = 1 align="center">
+	<thead>
+		<th>No</th>
+		<th>Nama</th>
+		<th>Alamat</th>
+		<th>Aksi</th>
+	</thead>
+	<tbody id="tempat"></tbody>
+</table>
+<script>
+// function cariData(){
+// 	var data = document.getElementById("data").value;
+
+// 	var cetak = 
+// }
+// function reset(){
+// 	var table = document.getElementById("tempat");
+// 	table.innerHTML = null;
+// }
+
+
+function tambahTabel() {
+	var baris = document.getElementById("baris").value;
+	// var kolom = document.getElementById("kolom").value;
+	var table = document.getElementById("tempat");
+	var i = table.rows.length;
+
+	// for (var i = 0; i < ; i++) {
+			var row = table.insertRow(i);
+			var att = row.setAttribute("id", i);
+			
+			// for (j = 0; j < kolom; j++){
+				var cell1 = row.insertCell(0).innerHTML = i;
+				var cell2 = row.insertCell(1).innerHTML = "hendrawa";
+				var cell3 = row.insertCell(2).innerHTML = "tasik";
+				var id = i;
+				var cell4 = row.insertCell(3).innerHTML = "<button onclick = document.getElementById('tempat').deleteRow("+id+")>delete</button>";
+				
+
+
+			// }
+	// }   
+
+}
+// function hapusbaris()
+// 	var table = document.getElementById("tempat");
+// 	var jumlah = document.getElementById("jumlah").value;
+// 	// for (k = 0; k < jumlah; k++){
+// 		var row = table.deleteRow(jumlah-1);
+// 	// }
+// }
+
+
+</script>
+
+</body>
+</html>
