@@ -5,10 +5,13 @@
 </head>
 <body>
 	
-		<!-- nama barang <input type="text" id="namabarang" required=""><br> -->
-		<SELECT>
-			<option value="namabarang 1"></option>
-		</SELECT>
+		nama barang
+		<SELECT id="namabarang">
+			<option value="Cabai">Cabai</option>
+			<option value="Terong">Terong</option>
+			<option value="Beras">Beras</option>
+			<option value="Bawang">Bawang</option>
+		</SELECT><br>
 		Jumlah Barang <input type="number" id="jumlahbarang" required=""><br>
 		Harga Barang <input type="number" id="hargabarang" required=""><br>
 		<button onclick="tambahData()">Tambah</button>
@@ -56,47 +59,17 @@
 		var cell2 = row.insertCell(1).innerHTML = namabarang;
 		var cell3 = row.insertCell(2).innerHTML = jumlahbarang;
 		var cell4 = row.insertCell(3).innerHTML = hargabarang;
-		// var id = table.rows.index;
 		var cell5 = row.insertCell(4).innerHTML = "<button onclick = hapusBaris()>delete</button>";
-		// var cell5 = row.insertCell(4).innerHTML = "<button onclick = document.getElementById('tempat').deleteRow("+i+")>delete</button>";
-				
-		
 		hitung(); //panggil function hitung();	
 		
 		
 	}
-	// function hapusRow(x){
-	// 	var table = document.getElementById('tempat');
-	// 	if(x >= table.rows.length ) {
-	// 		x = table.rows.length - 1;
-	// 		// alert(x);
- //            table.deleteRow (x);
- //        }else{
-	// 		table.deleteRow(x);
-	// 	}
-        
 
-        
- //        //jumlah jumlah barang
-	// 	var sumjumlah = 0;
-	// 	for (i = 0; i < table.rows.length; i++){
-	// 		sumjumlah = sumjumlah + parseInt(table.rows[i].cells[2].innerHTML);
-	// 	}
-	// 	//jumlahkan harga barang (jumlah * harga)
-	// 	var sumharga = 0;
-	// 	for (i = 0; i < table.rows.length; i++){
-	// 		sumharga = sumharga + (parseInt(table.rows[i].cells[2].innerHTML) * parseInt(table.rows[i].cells[3].innerHTML)) ;
-	// 	}
-	// 	hasil.innerHTML ="<td colspan='2'>"+sumjumlah+"</td><td colspan='3'>"+sumharga+"</td>";
-		
-		
-
-	// }
 
 	function hapusBaris(){
 		var td = event.target.parentNode; //masuk TD
 		var tr = td.parentNode; //masuk TR
-		tr.parentNode.removeChild(tr); //hapus TR
+		tr.parentNode.removeChild(tr); //masuk ke table dan hapus TR
 		//jumlah jumlah barang
 		hitung();//panggil function hitung
 	}
